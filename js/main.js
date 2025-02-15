@@ -6,8 +6,9 @@ const typed = new Typed('.typed', {
         
 		'<i class="typed">Jesús le respondió: Escrito está: </i>',
 		'<i class="typed">“No solo de pan vive el hombre, </i>',
-		'<i class="typed">sino de toda palabra que sale de la boca de Dios”. </i>',
-		'<i class="typed">Mateo 4:4. </i>',
+		'<i class="typed">sino de toda palabra que sale </i>',
+		'<i class="typed">de la boca de Dios” </i>',
+        '<i class="typed">Mateo 4:4. </i>',
         
 		'<i class="typed">Mira que estoy a la puerta y llamo. </i>',
 		'<i class="typed">Si alguno oye mi voz y abre la puerta, </i>',
