@@ -25,6 +25,7 @@ window.onload = function () {
 
     var player = new Player();
     player.play();
+  
 
     getStreamingData();
     // Interval to get streaming data in miliseconds
@@ -539,3 +540,8 @@ function intToDecimal(vol) {
 function decimalToInt(vol) {
     return vol * 100;
 }
+
+
+
+//Boton Compartir
+

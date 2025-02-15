@@ -1,21 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="ES">
 
 <head>
+     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
 />
-    <title>Radio Player</title>
+    <title>Radio Cristina Omega</title>
     <link rel="icon" type="image/png" href="img/cover.png" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="css/style.css">  
     <link rel="manifest" href="/manifest.json">
-    
+                   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+        
+		<!-------- Agregar a Favoritos----->
+<script language="JavaScript">
+function agregar(){
+    var url="https://thenweb.github.io/radiomegaonline"; 
+    var titulo="Radio Cristiana Omega"; 
+if (window.sidebar) { 
+    // Mozilla Firefox Bookmark
+    window.sidebar.addPanel(titulo, url,"");
+} 
+else if( window.external ) { // IE Favorite
+    if(window.ActiveXObject) {
+    //ie
+    window.external.AddFavorite( url, titulo);
+    } 
+    else {//chrome
+      alert('Presiona Crtl+D para Agregar a Marcadores');
+    }
+} 
+else if(window.opera && window.print) { // Opera
+  return true; 
+}
+else { //safri
+ alert('Presiona Crtl+D para Agregar a Marcadores'); }
+} 
+</script>
+
+	
+    <script> 
+  //Audio al cargar pagina al hacer click      
+const playSound = function() {
+  var sonido = new Audio("audio/audio_tecnologia.mp3");
+  sonido.play();
+  document.removeEventListener('click', playSound);
+}
+document.addEventListener('click', playSound);
+    </script> 
+	
+<script >
+// Sonido de Botones
+var sonido = new Audio();
+sonido.src="audio/Beeps.mp3";
+</script>	
+                 
 </head>
 
-<body>
 
+<body>
+     
+   
     <div class="cover-site">
         <div id="bgCover"></div>
         <div class="bg-mask"></div>
@@ -56,7 +104,7 @@
                                                     </div>
                                                     <div class="volume-slide col-10 text-center">       
                                                         <input type="range" id="volume" step="1" min="0" max="100" value="80" onchange="updateVolume(this.value)">
-                                                        <label for="volume">Volume:</label>
+                                                        <label for="volume">Volumen:</label>
                                                         <span id="volIndicator">80</span> %
                                                     </div>
                                                 </div>
@@ -75,7 +123,7 @@
                 </div>
                 <div class="row historic hidden">
                     <div class="col-12">
-                        <h2>MÚSICAS RECENTES</h2>
+                        <h2>MÚSICAS RECIENTES</h2>
                         <div class="row" id="historicSong">
                             <article class="col-12 col-md-6">
                                 <div class="cover-historic" id="cover-historic-1"></div>
@@ -90,7 +138,8 @@
                                     <div class="song">Música</div>
                                     <div class="artist">Artista</div>
                                 </div>
-                            </article>                              
+                            </article>  
+                                                                                                                                                            
                         </div>
                     </div>
                 </div>
@@ -130,28 +179,75 @@
           });
         }
       </script> 
-      
-          
-    
-    <div class="redes"><h4 style="color: antiquewhite; border: none;">RADIO CRISTIANA OMEGA</h4>
-       
-    <a href="http://action_share" target="_blank" title="">
-  <img src="img/compartir.png" width="45px" height="45px"   alt="Youtube"/></a> 
-      &nbsp; 
-      &nbsp;
-       
-       <a href="whatsapp://send?text=Hola hermano, estoy en sintonia.&phone=04121707235" target="_blank" title="">
-  <img src="img/Whatsapp%20100X100.png" borde="20px "width="45px"  height="45px" alt="Youtube"/></a> 
-       &nbsp; 
-       &nbsp;
-       
-       <a href="https://www.facebook.com/profile.php?id=100077660078810&mibextid=2JQ9oc" target="_blank" title="">
-  <img src="img/Facebook.png" width="45px" height="45px" alt="Youtube"/></a> 
-        
-    
-    <!-- Otros enlaces a redes sociales -->
-</div>    
+	  
+	
+	
+   <center><div class="redes1"><h6 style="color: white; border: none;">RADIO CRISTIANA OMEGA</h6></div></center>
+	
+	<!--- Botones Redes Sociales--->
+<center><div class="redesSoc"> 
+ <a href="https://api.whatsapp.com/send/?phone=58 04121707235&text=Hermano%20estoy%20en%20sintonía,
+%20Dios%20le%20bendiga..." target="_blank" title="Whatsapp" onmousedown="sonido.play()">
+    <img class="btnimg1"   src="img/Whatsapp.png" width="40px"  height="40px" alt="Whatsapp:"/></a> 
+  &nbsp;
 
+  <a href="https://www.facebook.com/profile.php?id=100077660078810&mibextid=2JQ9oc" target="_blank" title="Facebook" onmousedown="sonido.play()">
+    <img class="btnimg1" src="img/Facebook.png" width="40px" height="40px" alt="Facebook"/></a>
+  &nbsp;
+ 
+  <a href="javascript:agregar()">
+      <img class="btnimg1" src="img/favoritos.png" width="40px" height="40px" alt="Favoritos" title="Favorito" onmousedown="sonido.play()"></a>
+   	
+  &nbsp;
+  
+    <a href="#" target="_blank" title="Compartir" onclick="return nativeShare();" onmousedown="sonido.play()">
+    <img class="btnimg1" src="img/Compartir_0.png" width="40px" height="40px" alt="Compartir"/></a>
+	
+ </div></center>
+ <script>
+    var nativeShare = function() {
+       if (navigator.share) { 
+          navigator.share({
+             title: "titulo",
+             text: "texto",
+             url: "URL", 
+          }) 
+       }
+       return false;
+    }
+    </script>
+    
+	
+	
+	
+        
+     <!--BOTON IR ARRIBA-->
+    <div class="button-arriba">
+        <a class="item" id="buttonTop">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+    <script src="scriptbtn.js"></script>
+    
+	
+    <!-------Contador de Visitas---->
+    
+    
+    
+    
+   
+ <!---FOOTER---------->   
+    
+     <footer class="footer-clase">
+	 
+	<h2 class="titulo">
+		<span class="typed"></span></h2>
+		 
+	 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+     <script src="./js/main.js"></script>
+	      
+         
+	</footer>
 </body>
 
 </html>

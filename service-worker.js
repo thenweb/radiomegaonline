@@ -8,6 +8,8 @@ const urlsToCache = [
   '/css/style.css',
   '/js/script.js',
   '/img/cover.png',
+  '/audio/audio_tecnologia.mp3',
+  '/audio/Beeps.mp3',
   // Adicione outros recursos que deseja cache aqui
 ];
 
