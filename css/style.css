@@ -109,14 +109,14 @@ body {
     text-transform: uppercase;
     font-weight: 800;
 	text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.8);
-    margin-left: 3%;
+   
 }
 
 .info-current-song h3 {
     font-size: 19px;
     font-weight: 600;
     text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.8);
-	margin-left: 3%;
+	
 }
 
 .current-song {
