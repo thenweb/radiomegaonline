@@ -6,7 +6,7 @@
 @import url('bootstrap.min.css');
 
 html, body {
-    margin-top: 0px;
+    margin-top: 20px;
     height: 100%;
     
 }
@@ -76,10 +76,6 @@ body {
     transition: background-image 1s;
     border-radius: 10px;
     margin-bottom: 15px;
-}
-
-.col-12{
-    top: 10px;
 }
 
 
