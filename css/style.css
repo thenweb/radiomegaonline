@@ -31,9 +31,6 @@ body {
     transition: background-image 1s;
     background-attachment: fixed;
 }
-.col-12{
-    top: 10px;
-}
 
 
 /* FONDO DESENFOQUE */
@@ -79,6 +76,10 @@ body {
     transition: background-image 1s;
     border-radius: 10px;
     margin-bottom: 15px;
+}
+
+.col-12{
+    top: 10px;
 }
 
 
