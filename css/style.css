@@ -475,8 +475,8 @@ input[type=range]::-ms-thumb {
 
 /**BTN IR ARRIBA**/
 .button-arriba {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     transition: all .5s ease;
     position: fixed;
@@ -486,7 +486,8 @@ input[type=range]::-ms-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+	opacity: 50%;
+}   
 
 .button-arriba .item {
     width: 0%;
