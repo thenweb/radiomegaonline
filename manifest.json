@@ -3,7 +3,7 @@
     "short_name": "Radio Omega",
     "start_url": "./index.html",
     "display": "standalone",
-    "background_color": "#cdcdcd",
+    "background_color": "#080808",
     "theme_color": "#8a8a8a",
     "icons": [
         {
